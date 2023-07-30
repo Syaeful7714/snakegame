@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Snake Game</title>
+    <link rel="stylesheet" href="css/homeGame.css">
+</head>
+<body>
+    <div class="card">
+        <div class="card-title" id="nameHeading">Hai!</div>
+        <div class="card-heading">
+            <h3>Enjoy This Game</h3>
+            <button id="play-button" onclick="submitName()">Play Game</button>
+        </div>
+        <div class="watermark">Made by saufl_</div>
+    </div>
+    <script>
+        function getNameFromURL() {
+          var urlParams = new URLSearchParams(window.location.search);
+          var name = urlParams.get('name');
+          if (name) {
+            document.getElementById("nameHeading").textContent = "Halo, " + name + "!";
+          }
+        }
+    
+        getNameFromURL();
+
+        function submitName() {
+          window.location.href = "game.html?name=" + encodeURIComponent(name);
+        }
+      </script>
+</body>
+</html>

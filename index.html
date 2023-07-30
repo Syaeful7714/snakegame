@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Snake Game</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- card box -->
+    <div class="container">
+        <div class="card">
+             <h1 class="card-title">Welcome</h1>
+             <h3>to</h3>
+             <h3>Snake Game</h3>
+             <p>input your name!</p>
+             <div class="card-content">
+                 <input type="text" id="nameInput" placeholder="Your Name">
+                 <br>
+                 <button id="search-button" onclick="submitName()">Submit</button>
+                 </div>
+                 <div class="watermark">Made by saufl_</div>
+             </div>
+        </div>
+    </div>    
+    <script>
+    function submitName() {
+      var name = document.getElementById("nameInput").value;
+      window.location.href = "homeGame.html?name=" + encodeURIComponent(name);
+    }
+    </script>   
+</body>
+</html>
